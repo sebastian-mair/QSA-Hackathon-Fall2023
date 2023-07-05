@@ -15,7 +15,7 @@ on:
       workflow2_repo_github:
         description: 'repo-name'
         required: true
-        default: 'https://github.com/sebastian-mair/QSA-Hackathon-Fall2023' 
+        default: 'https://github.com/sebastian-mair/QSA-Hackathon-Fall2023-Grader' 
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Test
         run: |
-          curl -X POST https://api.github.com/repos/sebastian-mair/QSA-Hackathon-Fall2023/dispatches \
+          curl -X POST https://api.github.com/repos/sebastian-mair/QSA-Hackathon-Fall2023-Grader/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{ secrets.ACTIONS_KEY }} \
           --data '{"event_type": "Trigger Workflow", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
