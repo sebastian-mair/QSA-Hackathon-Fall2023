@@ -15,7 +15,7 @@ on:
       workflow2_repo_github:
         description: 'repo-name'
         required: true
-        default: 'https://github.com/sebastian-mair/QSA-Hackathon-Fall2023-Grader' 
+        default: 'QSA-Hackathon-Fall2023-Grader' 
 
 jobs:
   build:
